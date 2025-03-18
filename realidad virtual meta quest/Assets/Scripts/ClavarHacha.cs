@@ -8,8 +8,8 @@ using TMPro;
 public class ClavarHacha : MonoBehaviour
 {
     Rigidbody rb;
-   
 
+    AudioSource clavar;
     private Vector3 posicioninicial;
     private quaternion rotacioninicial;
 
@@ -17,6 +17,7 @@ public class ClavarHacha : MonoBehaviour
     private void Start()
     {
         rb = transform.GetComponent<Rigidbody>();
+        clavar = transform.GetComponent<AudioSource>();
         posicioninicial = transform.position;
         rotacioninicial = transform.rotation;
     }
@@ -62,7 +63,7 @@ public class ClavarHacha : MonoBehaviour
     public void attachAxe(Transform objeto)
     {
         rb.isKinematic = true;
-        
+        clavar.Play();
         XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.enabled = false;
 
