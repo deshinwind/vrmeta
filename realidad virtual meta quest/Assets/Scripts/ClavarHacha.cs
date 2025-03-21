@@ -12,8 +12,10 @@ public class ClavarHacha : MonoBehaviour
     AudioSource clavar;
     private Vector3 posicioninicial;
     private quaternion rotacioninicial;
-
+    public Animator uianim;
     public Collider Edge;
+    public AudioClip[] golpes;
+    public AudioClip acertado;
     private void Start()
     {
         rb = transform.GetComponent<Rigidbody>();
@@ -48,6 +50,11 @@ public class ClavarHacha : MonoBehaviour
             StartCoroutine("TiempoRotura");
 
         }
+
+        if (collision.gameObject.CompareTag("entorno"))
+        {
+            SonidosAleatorios();
+        }
     }
 
     
@@ -63,7 +70,8 @@ public class ClavarHacha : MonoBehaviour
     public void attachAxe(Transform objeto)
     {
         rb.isKinematic = true;
-        clavar.Play();
+        clavar.PlayOneShot(acertado,0.8F);
+        uianim.SetTrigger("X");
         XRGrabInteractable grabInteractable = GetComponent<XRGrabInteractable>();
         grabInteractable.enabled = false;
 
@@ -79,4 +87,9 @@ public class ClavarHacha : MonoBehaviour
 
     }
     
+    public void SonidosAleatorios()
+    {
+        AudioClip clip = golpes[UnityEngine.Random.Range(0, golpes.Length)];
+        clavar.PlayOneShot(clip, 0.4F);
+    }
 }

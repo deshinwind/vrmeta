@@ -4,20 +4,22 @@ public class Reiniciarnivel : MonoBehaviour
 {
 
     Animator anim;
-
+    AudioSource aud;
 
     private void Start()
     {
         anim = transform.GetComponent<Animator>();
+        aud = transform.GetComponent<AudioSource>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void Boton()
     {
-        if (collision.gameObject.CompareTag("Manos"))
-        {
-            anim.SetTrigger("pulsado");
-            SceneManager.LoadScene("juego");
-        }
-        
+        anim.SetTrigger("pulsado");
+        aud.Play();
+    }
+
+    public void Cambio()
+    {
+        SceneManager.LoadScene("juego");
     }
 }

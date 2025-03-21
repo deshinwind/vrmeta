@@ -11,6 +11,7 @@ TagManager:
   - hacha
   - RespawnZone
   - Manos
+  - entorno
   layers:
   - Default
   - TransparentFX

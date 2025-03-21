@@ -24,13 +24,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8922021728514668832}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: -2.58, y: 0, z: 0}
+  m_LocalRotation: {x: 0.67802405, y: 0.67812014, z: 0.20054483, w: 0.20054477}
+  m_LocalPosition: {x: -2.06, y: -0.21, z: -0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3686882354328799363}
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 180.002, y: -32.951996, z: -90.00702}
 --- !u!1001 &3792266778144534376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -147,7 +147,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa9339d4837c5547b81423d5dff5145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uianim: {fileID: 0}
   Edge: {fileID: 2849516598344474861}
+  golpes:
+  - {fileID: 8300000, guid: 04281fe48a1274940805427b3de5c874, type: 3}
+  - {fileID: 8300000, guid: 56ed7f2913df8ba4895b8034726cb3b5, type: 3}
+  - {fileID: 8300000, guid: 7c553bb0760f14a4b9799f2040c412f8, type: 3}
+  - {fileID: 8300000, guid: b350dae3315c1664bb76d14ab7e82f07, type: 3}
+  acertado: {fileID: 8300000, guid: 258f211efe9750b4c93f463612b25007, type: 3}
 --- !u!64 &5790119732684994112
 MeshCollider:
   m_ObjectHideFlags: 0

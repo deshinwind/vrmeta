@@ -6,7 +6,7 @@ public class Encestar : MonoBehaviour
 
     public int puntos;
     public Text marcador;
-
+    public AudioSource encest;
    
 
     private void OnTriggerExit(Collider other)
@@ -14,6 +14,7 @@ public class Encestar : MonoBehaviour
         if (other.gameObject.CompareTag("Pbaloncesto"))
         {
             puntos++;
+            encest.Play();
             marcador.text = puntos.ToString();
         }
     }
