@@ -14,7 +14,9 @@ public class ClavarHacha : MonoBehaviour
     private quaternion rotacioninicial;
     public Animator uianim;
     public Collider Edge;
-    public AudioClip[] golpes;
+    public AudioClip[] golpescuchillo;
+    public AudioClip[] golpeshacha;
+    public AudioClip[] golpessarten;
     public AudioClip acertado;
     private void Start()
     {
@@ -51,11 +53,25 @@ public class ClavarHacha : MonoBehaviour
 
         }
 
+        //colider soniddos//
+
         if (collision.gameObject.CompareTag("entorno"))
         {
-            SonidosAleatorios();
+            if (gameObject.CompareTag("Cuchillo"))
+            {
+                SonidosCuchillo();
+            }
+            else if (gameObject.CompareTag("hacha"))
+            {
+                SonidosHacha();
+            }
+            else if (gameObject.CompareTag("sarten"))
+            {
+                SonidosSarten();
+            }
         }
-    }
+    
+}
 
     
 
@@ -87,9 +103,19 @@ public class ClavarHacha : MonoBehaviour
 
     }
     
-    public void SonidosAleatorios()
+    public void SonidosCuchillo()
     {
-        AudioClip clip = golpes[UnityEngine.Random.Range(0, golpes.Length)];
+        AudioClip clip = golpescuchillo[UnityEngine.Random.Range(0, golpescuchillo.Length)];
+        clavar.PlayOneShot(clip, 0.4F);
+    }
+    public void SonidosHacha()
+    {
+        AudioClip clip = golpeshacha[UnityEngine.Random.Range(0, golpeshacha.Length)];
+        clavar.PlayOneShot(clip, 0.7F);
+    }
+    public void SonidosSarten()
+    {
+        AudioClip clip = golpessarten[UnityEngine.Random.Range(0, golpessarten.Length)];
         clavar.PlayOneShot(clip, 0.4F);
     }
 }

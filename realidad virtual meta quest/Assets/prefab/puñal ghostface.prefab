@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 8922021728514668832}
   serializedVersion: 2
   m_LocalRotation: {x: 0.67802405, y: 0.67812014, z: 0.20054483, w: 0.20054477}
-  m_LocalPosition: {x: -2.06, y: -0.21, z: -0.07}
+  m_LocalPosition: {x: -2.1, y: -0.59, z: -0.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -149,11 +149,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uianim: {fileID: 0}
   Edge: {fileID: 2849516598344474861}
-  golpes:
+  golpescuchillo:
   - {fileID: 8300000, guid: 04281fe48a1274940805427b3de5c874, type: 3}
   - {fileID: 8300000, guid: 56ed7f2913df8ba4895b8034726cb3b5, type: 3}
   - {fileID: 8300000, guid: 7c553bb0760f14a4b9799f2040c412f8, type: 3}
   - {fileID: 8300000, guid: b350dae3315c1664bb76d14ab7e82f07, type: 3}
+  golpeshacha:
+  - {fileID: 8300000, guid: 4ca5d277e19bf65448531098ca82168b, type: 3}
+  - {fileID: 8300000, guid: a4113e8e84aa9614cb63730b4d160028, type: 3}
+  - {fileID: 8300000, guid: 52fbcbadacac1f0429b75250cb73a6aa, type: 3}
+  - {fileID: 8300000, guid: 025e3d795b587bf4faa6a543f95019c0, type: 3}
+  - {fileID: 8300000, guid: 18811184584be024d900b59c30477ef5, type: 3}
+  - {fileID: 8300000, guid: 3cc4e906ea7b0a341a6e0e36f4da6889, type: 3}
+  golpessarten:
+  - {fileID: 8300000, guid: a6a51a6110d30884e88361527bf841c3, type: 3}
+  - {fileID: 8300000, guid: 0c41747657d2acc499f2b8af8a35cd7e, type: 3}
   acertado: {fileID: 8300000, guid: 258f211efe9750b4c93f463612b25007, type: 3}
 --- !u!64 &5790119732684994112
 MeshCollider:

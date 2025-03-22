@@ -4,6 +4,7 @@ public class Linterna : MonoBehaviour
 {
     public GameObject luz;
     public AudioSource click;
+    public AudioSource golpe;
     
     public void Encender()
     {
@@ -15,5 +16,13 @@ public class Linterna : MonoBehaviour
     {
         luz.SetActive(false);
         click.Play();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("entorno"))
+        {
+            golpe.Play();
+        }
     }
 }
