@@ -5,6 +5,7 @@ public class Reiniciarnivel : MonoBehaviour
 
     Animator anim;
     AudioSource aud;
+    public string nombreescena;
 
     private void Start()
     {
@@ -18,8 +19,10 @@ public class Reiniciarnivel : MonoBehaviour
         aud.Play();
     }
 
-    public void Cambio()
+    
+
+    public void Cambioescenapornombre()
     {
-        SceneManager.LoadScene("juego");
+        SceneManager.LoadScene(nombreescena);
     }
 }

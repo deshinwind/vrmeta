@@ -1,0 +1,1 @@
+C:\Users\USUARIO\Documents\GitHub\vrmeta\realidad virtual meta quest\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\3231k3aa\obj\arm64-v8a
